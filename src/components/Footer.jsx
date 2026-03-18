@@ -1,4 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 import './Footer.css';
 
 const frameCount = 240;
@@ -81,8 +83,9 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} FourthWallFreak. Building Chaos-driven Systems.
           </div>
           <div className="contact-socials">
-            <a href="https://github.com/gintama1018" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/sonu-jangir-98968b390/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/gintama1018" target="_blank" rel="noopener noreferrer"><FaGithub /> GitHub</a>
+            <a href="https://www.linkedin.com/in/sonu-jangir-98968b390/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /> LinkedIn</a>
+            <a href="mailto:pihujang0@gmail.com"><MdEmail /> pihujang0@gmail.com</a>
           </div>
         </div>
 

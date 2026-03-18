@@ -117,18 +117,25 @@
 }
 
 .contact-socials a {
-  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.85rem;
   font-weight: 500;
-  color: #fff;
+  color: rgba(255,255,255,0.6);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  opacity: 0.7;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-socials a svg {
+  font-size: 1rem;
 }
 
 .contact-socials a:hover {
-  opacity: 1;
-  color: var(--shinsengumi-blue);
-  text-shadow: 0 0 10px rgba(74, 144, 226, 0.4);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {

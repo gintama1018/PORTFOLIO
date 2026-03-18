@@ -1,5 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 import './ScrollSequence.css';
 
 const frameCount = 240;
@@ -114,6 +116,17 @@ export default function ScrollSequence() {
               <h1 className="bold-3d-text">CREATIVE<br/>TECHNOLOGIST</h1>
               <p className="subtitle-3d">Code. Create. Break. Rebuild.<br/>Building systems that think, react, and evolve.</p>
               <div className="scroll-indicator-line"></div>
+              <div className="hero-socials">
+                <a href="https://github.com/gintama1018" target="_blank" rel="noopener noreferrer" className="hero-social-link" title="GitHub">
+                  <FaGithub />
+                </a>
+                <a href="https://www.linkedin.com/in/sonu-jangir-98968b390/" target="_blank" rel="noopener noreferrer" className="hero-social-link" title="LinkedIn">
+                  <FaLinkedinIn />
+                </a>
+                <a href="mailto:pihujang0@gmail.com" className="hero-social-link" title="Email">
+                  <MdEmail />
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>
