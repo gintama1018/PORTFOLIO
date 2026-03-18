@@ -1,0 +1,221 @@
+.scroll-sequence-container {
+  height: 500vh; /* extended for longer, smoother text scrolling */
+  position: relative;
+  background-color: var(--bg-main); /* Deep, sophisticated dark theme */
+  z-index: 1;
+}
+
+.sticky-canvas-wrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--bg-main);
+}
+
+.sequence-canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateZ(0); /* Hardware acceleration */
+  filter: contrast(1.1) brightness(0.9); /* cinematic feel */
+}
+
+/* Bold 3D Modern Typography Overlay */
+.canvas-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.6) 100%);
+}
+
+.cinematic-text {
+  position: absolute;
+  width: 100%;
+  padding: 0 5vw;
+}
+
+.title-strong {
+  top: 30%;
+  text-align: left;
+}
+
+.title-center {
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.title-bottom {
+  bottom: 15%;
+  text-align: right;
+}
+
+.bold-3d-text {
+  font-size: clamp(4rem, 10vw, 10rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  margin-bottom: 24px;
+  /* Premium Soft 3D lighting effect without any neon */
+  text-shadow: 
+    0px 4px 10px rgba(0, 0, 0, 0.3),
+    0px 10px 20px rgba(0, 0, 0, 0.4),
+    0px 20px 40px rgba(0, 0, 0, 0.5),
+    1px 1px 0px rgba(255, 255, 255, 0.5),
+    -1px -1px 0px rgba(0, 0, 0, 0.8);
+}
+
+.subtitle-3d {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 300;
+  max-width: 600px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+.title-center .subtitle-3d {
+  margin: 0 auto;
+}
+
+.title-bottom .subtitle-3d {
+  margin-left: auto;
+}
+
+/* Glass Box Container for Title */
+.title-glass-box {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 80px;
+  background: rgba(20, 20, 20, 0.4);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 32px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 120px 20px rgba(224, 228, 232, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.title-glass-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+}
+
+/* YOROZUYA BADGE: Kagura Red Accent */
+.yorozuya-badge {
+  font-family: 'Yu Mincho', 'MS Mincho', serif;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  color: var(--kagura-red);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  padding: 6px 16px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 24px;
+  background: rgba(255, 107, 107, 0.05);
+}
+
+/* YOROZUYA BADGE: Kagura Red Accent */
+.yorozuya-badge {
+  font-family: 'Yu Mincho', 'MS Mincho', serif;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  color: var(--kagura-red);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  padding: 6px 16px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 24px;
+  background: rgba(255, 107, 107, 0.05);
+}
+
+.scroll-indicator-line {
+  margin-top: 40px;
+  width: 2px;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.8), transparent);
+  animation: pulse-line 2s infinite ease-in-out;
+}
+
+@keyframes pulse-line {
+  0% { transform: scaleY(0.1); opacity: 0; }
+  50% { transform: scaleY(1); opacity: 1; }
+  100% { transform: scaleY(0.1); opacity: 0; }
+}
+
+/* Cinematic HUD Elements */
+.hud-corners {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.hud-corner {
+  position: absolute;
+  font-family: monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.4);
+  padding: 40px;
+  text-transform: uppercase;
+}
+
+.top-left { top: 0; left: 0; }
+.top-right { top: 0; right: 0; text-align: right; }
+.bottom-left { bottom: 0; left: 0; }
+.bottom-right { bottom: 0; right: 0; text-align: right; }
+
+.hud-crosshair.center {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px; height: 40px;
+  border-left: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  opacity: 0.5;
+}
+
+.scroll-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  color: #ffffff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  margin-top: 32px;
+}
+
+.scroll-indicator .line {
+  width: 80px;
+  height: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 768px) {
+  .title-strong, .title-center, .title-bottom {
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: auto;
+  }
+  
+  .title-bottom {
+    top: 70%;
+  }
+  
+  .scroll-indicator {
+    justify-content: center;
+  }
+}
